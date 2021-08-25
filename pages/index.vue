@@ -1,5 +1,7 @@
 <template>
-  <Tutorial />
+  <div>
+    Lokesh's website comming soon!
+  </div>
 </template>
 
 <script>
