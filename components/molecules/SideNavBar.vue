@@ -1,6 +1,6 @@
 <template>
     <div class="side-nav bg-secondary">
-       <font-awesome-icon icon="dollar-sign"  style="font-size: 30px"/>
+       <fa icon="address-card" />
     </div>
 </template>
 <script>
