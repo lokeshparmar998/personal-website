@@ -1,13 +1,19 @@
 <template>
-    <div class="icon-container">
+    <div class="icon-container" @click="goto()">
         <fa :icon="icon" class="icon" />
     </div>
 </template>
 <script>
 export default {
     props:{
-        icon: String
+        icon: String,
+        route: String
     },
+    methods:{
+        goto(){
+            this.$router.push({path: `${this.route}`})
+        }
+    }
 }
 </script>
 <style scoped>

@@ -4,6 +4,7 @@
       class="custom-logo"
       @mouseover="showGif = true"
       @mouseleave="showGif = false"
+      @click="goto"
     >
       <img
         v-show="showGif"
@@ -54,11 +55,13 @@
         </g>
       </svg>
     </div>
-    <SideBarIcons :icon="icons.about" />
-    <SideBarIcons :icon="icons.skills" />
-    <SideBarIcons :icon="icons.projects" />
-    <SideBarIcons :icon="icons.contact" />
-    <SideBarIcons :icon="icons.dev_tools" />
+
+    <SideBarIcons :icon="icons.about" route="/" />
+    <SideBarIcons :icon="icons.skills" route="skills" />
+    <SideBarIcons :icon="icons.projects" route="projects" />
+    <SideBarIcons :icon="icons.contact" route="contact" />
+    <SideBarIcons :icon="icons.dev_tools" route="tools" />
+    <SideBarIcons :icon="icons.blog" route="blogs" />
   </div>
 </template>
 <script>
@@ -74,12 +77,17 @@ export default {
         skills: "terminal",
         projects: "project-diagram",
         contact: "envelope",
-        dev_tools: "qrcode"
+        dev_tools: "qrcode",
+        blog: "cubes"
       },
       showGif: false
     };
   },
-  methods: {}
+  methods: {
+    goto() {
+      this.$router.push({ path: "/" });
+    }
+  }
 };
 </script>
 <style scoped>
