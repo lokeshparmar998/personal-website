@@ -28,6 +28,6 @@ export default {
 box-shadow: 6px 3px 5px 0px rgba(39,57,80,1);
 }
 .main-content {
-  widows: calc(100% - 70px);
+  width: calc(100% - 70px);
 }
 </style>

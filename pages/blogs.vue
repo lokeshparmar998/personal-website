@@ -1,5 +1,7 @@
 <template>
-    <div class="blogs">
-        Blogs coming soon
+  <div class="blogs">
+    <div class="page-header">
+      Blogs
     </div>
+  </div>
 </template>
