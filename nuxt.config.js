@@ -10,14 +10,6 @@ export default {
     ],
     link: [
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
-      {
-        rel: "preload",
-        as: "font",
-        type: "font/woff2",
-        href:
-          "/nuxt/node_modules/@mdi/font/fonts/materialdesignicons-webfont.woff2",
-        crossorigin: "anonymous"
-      }
     ]
   },
 
