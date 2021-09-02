@@ -1,7 +1,7 @@
 <template>
   <div class="contact">
     <div class="page-header">
-      Contact me
+      Connect with me
     </div>
   </div>
 </template>

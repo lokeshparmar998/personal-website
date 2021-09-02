@@ -23,9 +23,9 @@ export default {
 }
 .side-nav-bar {
   width: 70px;
-  -webkit-box-shadow: 6px 3px 5px 0px rgba(39,57,80,1);
--moz-box-shadow: 6px 3px 5px 0px rgba(39,57,80,1);
-box-shadow: 6px 3px 5px 0px rgba(39,57,80,1);
+  -webkit-box-shadow: 6px 3px 5px 0px rgba(39, 57, 80, 1);
+  -moz-box-shadow: 6px 3px 5px 0px rgba(39, 57, 80, 1);
+  box-shadow: 6px 3px 5px 0px rgba(39, 57, 80, 1);
 }
 .main-content {
   width: calc(100% - 70px);
