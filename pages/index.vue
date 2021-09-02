@@ -75,6 +75,9 @@ export default {
   height: 120px;
   border-radius: 60px;
   margin-bottom: -50px;
+  -webkit-box-shadow: 0px 8px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 8px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 8px 5px 0px rgba(0,0,0,0.75);
 }
 .profile-container {
   width: 493px;
