@@ -1,7 +1,7 @@
 <template>
   <div class="tools">
     <div class="page-header">
-      Development tools
+      Developer tools
     </div>
   </div>
 </template>
