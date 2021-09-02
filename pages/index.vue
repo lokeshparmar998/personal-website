@@ -31,8 +31,8 @@
           </div>
         </div>
         <div class="profile-footer">
-          <Button :button="primaryButton" />
-          <Button :button="secondaryButton" />
+          <Button :button="projectButton" />
+          <Button :button="connectButton" />
         </div>
       </div>
     </div>
@@ -46,13 +46,19 @@ export default {
   },
   data: function() {
     return {
-      primaryButton: {
+      projectButton: {
         class: "primary size45 nunito_font",
-        text: "Checkout my projects 👨‍💻"
+        text: "Checkout my projects 👨‍💻",
+        route: true,
+        navigation: 'projects',
+        operation:false
       },
-      secondaryButton: {
+      connectButton: {
         class: "secondary size45 nunito_font",
-        text: "Connect with me 🤓"
+        text: "Connect with me 🤓",
+        route: true,
+        navigation: 'contact',
+        operation:false,
       }
     };
   }

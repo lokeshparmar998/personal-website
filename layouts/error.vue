@@ -11,7 +11,7 @@
         <fa icon="spider" class="icon" />
       </div>
       <div class="navigation">
-        <Button :button="primaryButton" />
+        <Button :button="homeButton" />
       </div>
     </div>
   </div>
@@ -26,9 +26,12 @@ export default {
   },
   data: function() {
     return {
-      primaryButton: {
+      homeButton: {
         class: "primary size20 nunito_font",
-        text: "Back to home 👾"
+        text: "Back to home 👾",
+        route: true,
+        navigation: '/',
+        operation:false,
       }
     };
   }

@@ -1,5 +1,5 @@
 <template>
-    <button :class="button.class">
+    <button :class="button.class" @click="handleButtonClick">
         {{button.text}}
     </button>
 </template>
@@ -8,6 +8,14 @@ export default {
     props:{
         button: Object
     },
+    methods:{
+        handleButtonClick(){
+            if(this.button.route)
+                this.$router.push({path: this.button.navigation})
+            else
+                this.$emit('operation',this.button.operation)
+        }
+    }
 }
 </script>
 <style scoped>
