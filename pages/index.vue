@@ -50,15 +50,15 @@ export default {
         class: "primary size45 nunito_font",
         text: "Checkout my projects 👨‍💻",
         route: true,
-        navigation: 'projects',
-        operation:false
+        navigation: "projects",
+        operation: false
       },
       connectButton: {
         class: "secondary size45 nunito_font",
         text: "Connect with me 🤓",
         route: true,
-        navigation: 'contact',
-        operation:false,
+        navigation: "contact",
+        operation: false
       }
     };
   }
@@ -132,5 +132,47 @@ export default {
   display: flex;
   justify-content: space-around;
   padding: 30px 0px;
+}
+@media (max-width: 600px) {
+  .about-container {
+    margin-top: 40px;
+  }
+  .profile-header {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    text-align: center;
+    font-family: "nunito", sans-serif;
+    letter-spacing: -0.47px;
+    color: #ffffff;
+    font-weight: 600;
+    line-height: 50px;
+  }
+  .profile-container {
+    width: 90%;
+    margin: auto;
+    /* height: 427px; */
+    background-color: #2c405a;
+    padding-top: 40px;
+    border: 1px solid #3f536e;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .profile-pic img {
+    width: 100px;
+    height: 100px;
+    border-radius: 60px;
+    margin-bottom: -50px;
+    -webkit-box-shadow: 0px 8px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 8px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 8px 5px 0px rgba(0, 0, 0, 0.75);
+  }
+  .social-media {
+    margin: 15px 0px 20px 0px;
+    display: flex;
+    justify-content: center;
+  }
 }
 </style>

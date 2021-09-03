@@ -6,57 +6,20 @@
       @mouseleave="showGif = false"
       @click="goto"
     >
-      <img v-show="showGif" style="height:70px; width:70px" :src="gif" alt="" />
-      <svg
-        v-show="!showGif"
-        xmlns="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink"
-        width="70"
-        height="70"
-        viewBox="0 0 200 200"
-      >
-        <defs>
-          <clipPath id="clip-Custom_Size_1">
-            <rect width="200" height="200" />
-          </clipPath>
-        </defs>
-        <g
-          id="Custom_Size_1"
-          data-name="Custom Size – 1"
-          clip-path="url(#clip-Custom_Size_1)"
-        >
-          <g id="Group_1" data-name="Group 1">
-            <g id="website-logo-1" transform="translate(-156 -150)">
-              <text
-                id="L"
-                transform="translate(193 260)"
-                fill="#11c0bd"
-                font-size="120"
-                font-family="SegoeScript, Segoe Script"
-              >
-                <tspan x="0" y="0">L</tspan>
-              </text>
-              <text
-                id="P."
-                transform="translate(225 313)"
-                fill="#11c0bd"
-                font-size="120"
-                font-family="SegoeScript, Segoe Script"
-              >
-                <tspan x="0" y="0">P.</tspan>
-              </text>
-            </g>
-          </g>
-        </g>
-      </svg>
+      <img v-show="showGif" :src="gif" alt="" />
+      <img v-show="!showGif" src="~/assets/images/logo.svg" alt="" />
     </div>
 
     <SideBarIcons :icon="icons.about" route="/" />
     <SideBarIcons :icon="icons.skills" route="skills" />
     <SideBarIcons :icon="icons.projects" route="projects" />
     <SideBarIcons :icon="icons.contact" route="contact" />
-    <SideBarIcons :icon="icons.dev_tools" route="tools" />
-    <SideBarIcons :icon="icons.blog" route="blogs" />
+    <SideBarIcons
+      :icon="icons.dev_tools"
+      route="tools"
+      class="responsive-show"
+    />
+    <SideBarIcons :icon="icons.blog" route="blogs" class="responsive-show" />
   </div>
 </template>
 <script>
@@ -104,7 +67,7 @@ export default {
         [5, five],
         [6, six],
         [7, seven],
-        [8, eight],
+        [8, eight]
       ]);
       this.gif = myRandomGif.get(random);
       this.showGif = true;
@@ -113,6 +76,26 @@ export default {
 };
 </script>
 <style scoped>
+@media screen and (max-width: 600px) {
+  .side-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .custom-logo {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  .custom-logo img {
+    height: 30px;
+    width: 30px;
+  }
+  .responsive-show {
+    display: none;
+  }
+}
 .side-nav {
   width: 70px;
   height: 100vh;
@@ -122,5 +105,9 @@ export default {
   height: 70px;
   margin-bottom: 10px;
   cursor: pointer;
+}
+.custom-logo img {
+  height: 70px;
+  width: 70px;
 }
 </style>
