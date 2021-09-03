@@ -54,4 +54,24 @@ export default {
 .size50 {
   width: 50%;
 }
+@media (max-width: 600px) {
+  .primary {
+    color: white;
+    background-color: #273950;
+    border: 1px solid #3f536e;
+    border-radius: 4px;
+    padding: 5px 12px;
+    font-size: 13px;
+    cursor: pointer;
+  }
+  .secondary {
+    color: white;
+    background-color: #0093ee;
+    border: 1px solid #0093ee;
+    border-radius: 4px;
+    padding: 5px 12px;
+    font-size: 13px;
+    cursor: pointer;
+  }
+}
 </style>
