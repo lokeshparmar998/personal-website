@@ -2,7 +2,7 @@
   <div class="about">
     <div class="about-container">
       <div class="profile-pic">
-        <img src="~/assets/images/lokesh-profile.png" alt="" />
+        <img src="~/assets/images/lokesh-avatar.png" alt="" />
       </div>
       <div class="profile-container">
         <div class="">
