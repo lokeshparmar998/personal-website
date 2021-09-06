@@ -54,6 +54,7 @@ export default {
   },
   methods: {
     goto() {
+      this.handleShowGif();
       this.$router.push({ path: "/" });
     },
     handleShowGif() {
@@ -76,26 +77,6 @@ export default {
 };
 </script>
 <style scoped>
-@media screen and (max-width: 600px) {
-  .side-nav {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-  }
-  .custom-logo {
-    width: 30px;
-    height: 30px;
-    margin-bottom: 10px;
-    cursor: pointer;
-  }
-  .custom-logo img {
-    height: 30px;
-    width: 30px;
-  }
-  .responsive-show {
-    display: none;
-  }
-}
 .side-nav {
   width: 70px;
   height: 100vh;
@@ -109,5 +90,15 @@ export default {
 .custom-logo img {
   height: 70px;
   width: 70px;
+}
+@media screen and (max-width: 600px) {
+  .side-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .responsive-show {
+    display: none;
+  }
 }
 </style>
