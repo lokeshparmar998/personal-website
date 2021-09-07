@@ -12,14 +12,14 @@
 
     <SideBarIcons :icon="icons.about" route="/" />
     <SideBarIcons :icon="icons.skills" route="skills" />
-    <SideBarIcons :icon="icons.projects" route="projects" />
+    <!-- <SideBarIcons :icon="icons.projects" route="projects" /> -->
     <SideBarIcons :icon="icons.contact" route="contact" />
     <SideBarIcons
       :icon="icons.dev_tools"
       route="tools"
       class="responsive-show"
     />
-    <SideBarIcons :icon="icons.blog" route="blogs" class="responsive-show" />
+    <SideBarIcons :icon="icons.blog" route="blogs" />
   </div>
 </template>
 <script>
@@ -96,6 +96,7 @@ export default {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    height: 70px;
   }
   .responsive-show {
     display: none;
