@@ -12,7 +12,9 @@ export default {
     handleButtonClick() {
       if (this.button.route)
         this.$router.push({ path: this.button.navigation });
-      else this.$emit("operation", this.button.operation);
+      else {
+        this.$emit("operation");
+      }
     }
   }
 };
@@ -60,7 +62,7 @@ export default {
     background-color: #273950;
     border: 1px solid #3f536e;
     border-radius: 4px;
-    padding: 5px 12px;
+    padding: 10px 12px;
     font-size: 13px;
     cursor: pointer;
   }

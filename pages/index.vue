@@ -31,7 +31,7 @@
           </div>
         </div>
         <div class="profile-footer">
-          <Button :button="projectButton" />
+          <Button :button="resumeButton" v-on:operation="downloadResume" />
           <Button :button="connectButton" />
         </div>
       </div>
@@ -46,12 +46,12 @@ export default {
   },
   data: function() {
     return {
-      projectButton: {
+      resumeButton: {
         class: "primary size45 nunito_font",
-        text: "Checkout my projects 👨‍💻",
-        route: true,
+        text: "My Resume 🚀 ",
+        route: false,
         navigation: "projects",
-        operation: false
+        operation: true
       },
       connectButton: {
         class: "secondary size45 nunito_font",
@@ -61,6 +61,11 @@ export default {
         operation: false
       }
     };
+  },
+  methods:{
+    downloadResume(){
+      window.open('https://drive.google.com/file/d/1PMzmLTy__fHjH5Cx_0mM_nLvwP64tdqv/view?usp=sharing')
+    }
   }
 };
 </script>

@@ -37,7 +37,7 @@ export default {
     component: 'fa',
     icons: {
       solid: true,
-      brands: []
+      /* brands: true */
     }
   },
   // Modules: https://go.nuxtjs.dev/config-modules
