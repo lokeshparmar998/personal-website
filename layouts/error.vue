@@ -1,12 +1,8 @@
 <template>
   <div class="error-page">
     <div class="error-content">
-      <div class="error-text" v-if="error.statusCode === 404">
-        Error 404
-      </div>
-      <div class="error-text-small">
-        That page does not exist
-      </div>
+      <div class="error-text" v-if="error.statusCode === 404">Error 404</div>
+      <div class="error-text-small">That page does not exist</div>
       <div class="error-icon">
         <fa icon="spider" class="icon" />
       </div>
@@ -22,19 +18,19 @@ export default {
   props: ["error"],
   layout: "fullheight",
   components: {
-    Button
+    Button,
   },
-  data: function() {
+  data: function () {
     return {
       homeButton: {
         class: "primary size20 nunito_font",
         text: "Back to home 👾",
         route: true,
-        navigation: '/',
-        operation:false,
-      }
+        navigation: "/",
+        operation: false,
+      },
     };
-  }
+  },
 };
 </script>
 <style scoped>
@@ -42,7 +38,7 @@ export default {
   display: flex;
   justify-content: center;
 }
-.error-content{
+.error-content {
   width: 100%;
   margin-top: 50px;
 }

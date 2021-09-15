@@ -7,6 +7,7 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
+    "style": "prettier --write \"pages/**/*.vue\" & prettier --write \"components/**/*.vue\" & prettier --write \"layouts/**/*.vue\" & prettier --write \"store/**/*.js\" & prettier --write \"plugins/**/*.js\"",
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
     "lint": "yarn lint:js"
   },
@@ -15,7 +16,8 @@
     "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/pwa": "^3.3.5",
     "core-js": "^3.15.1",
-    "nuxt": "^2.15.7"
+    "nuxt": "^2.15.7",
+    "prettier": "^2.4.0"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.14.7",

@@ -36,9 +36,9 @@ import seven from "~/assets/gifs/7.gif";
 import eight from "~/assets/gifs/8.gif";
 export default {
   components: {
-    SideBarIcons
+    SideBarIcons,
   },
-  data: function() {
+  data: function () {
     return {
       icons: {
         about: "user",
@@ -46,10 +46,10 @@ export default {
         projects: "project-diagram",
         contact: "envelope",
         dev_tools: "qrcode",
-        blog: "cubes"
+        blog: "cubes",
       },
       gif: null,
-      showGif: false
+      showGif: false,
     };
   },
   methods: {
@@ -68,12 +68,12 @@ export default {
         [5, five],
         [6, six],
         [7, seven],
-        [8, eight]
+        [8, eight],
       ]);
       this.gif = myRandomGif.get(random);
       this.showGif = true;
-    }
-  }
+    },
+  },
 };
 </script>
 <style scoped>

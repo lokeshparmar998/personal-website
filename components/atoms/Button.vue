@@ -6,7 +6,7 @@
 <script>
 export default {
   props: {
-    button: Object
+    button: Object,
   },
   methods: {
     handleButtonClick() {
@@ -15,8 +15,8 @@ export default {
       else {
         this.$emit("operation");
       }
-    }
-  }
+    },
+  },
 };
 </script>
 <style scoped>

@@ -1,8 +1,6 @@
 <template>
   <div class="skills">
-    <div class="page-header">
-      My Skill set
-    </div>
+    <div class="page-header">My Skill set</div>
 
     <!-- <div class="skill-set">
       <img src="~/assets/images/skills/html.svg" alt="">
@@ -12,17 +10,16 @@
       <img src="~/assets/images/skills/vue.svg" alt="">
     </div> -->
   </div>
-</template> 
+</template>
 <style scoped>
-.skill-set{
+.skill-set {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   margin-top: 50px;
 }
-.skill-set img{
+.skill-set img {
   width: 80px;
   margin-top: 20px;
 }
-
 </style>

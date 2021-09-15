@@ -6,9 +6,7 @@
       </div>
       <div class="profile-container">
         <div class="">
-          <div class="profile-header">
-            Hello World! This is Lokesh.
-          </div>
+          <div class="profile-header">Hello World! This is Lokesh.</div>
           <div class="profile-content">
             I am a javascript developer based in Gurugram (India) 😎
           </div>
@@ -42,31 +40,33 @@
 import Button from "@/components/atoms/Button.vue";
 export default {
   components: {
-    Button
+    Button,
   },
-  data: function() {
+  data: function () {
     return {
       resumeButton: {
         class: "primary size45 nunito_font",
         text: "My Resume 🚀 ",
         route: false,
         navigation: "projects",
-        operation: true
+        operation: true,
       },
       connectButton: {
         class: "secondary size45 nunito_font",
         text: "Connect with me 🤓",
         route: true,
         navigation: "contact",
-        operation: false
-      }
+        operation: false,
+      },
     };
   },
-  methods:{
-    downloadResume(){
-      window.open('https://drive.google.com/file/d/1PMzmLTy__fHjH5Cx_0mM_nLvwP64tdqv/view?usp=sharing')
-    }
-  }
+  methods: {
+    downloadResume() {
+      window.open(
+        "https://drive.google.com/file/d/1PMzmLTy__fHjH5Cx_0mM_nLvwP64tdqv/view?usp=sharing"
+      );
+    },
+  },
 };
 </script>
 <style scoped>

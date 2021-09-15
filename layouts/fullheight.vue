@@ -2,9 +2,9 @@
   <Nuxt class="fullheight" />
 </template>
 <style scoped>
-.fullheight{
+.fullheight {
   width: 100vw;
   height: 100vh;
-  background-color: #12181B;
+  background-color: #12181b;
 }
 </style>
