@@ -12,7 +12,7 @@
       <img src="~/assets/images/skills/vue.svg" alt="">
     </div> -->
   </div>
-</template>
+</template> 
 <style scoped>
 .skill-set{
   display: flex;

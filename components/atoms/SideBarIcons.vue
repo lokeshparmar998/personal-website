@@ -1,6 +1,6 @@
 <template>
-    <div class="icon-container" @click="goto()">
-        <fa :icon="icon" class="icon" />
+    <div class="icon-container" >
+        <fa :icon="icon" class="icon" @click="goto()" />
     </div>
 </template>
 <script>
