@@ -75,5 +75,8 @@ export default {
     font-size: 13px;
     cursor: pointer;
   }
+  .size20 {
+    width: 50%;
+  }
 }
 </style>

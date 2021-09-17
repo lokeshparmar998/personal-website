@@ -12,9 +12,21 @@ export default {
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
     ]
   },
+  /* custom port */
   server:{
     port: 3000,
   },
+  /* Google analytics */
+  googleAnalytics: {
+    id: 'UA-207883981-1',
+  },
+  publicRuntimeConfig: {
+    googleAnalytics: {
+      id: 'UA-207883981-1'
+    }
+  },
+
+  /*  */
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     "~/assets/css/main.css",
@@ -32,6 +44,7 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     '@nuxtjs/fontawesome',
+    '@nuxtjs/google-analytics'
   ],
   fontawesome: {
     component: 'fa',

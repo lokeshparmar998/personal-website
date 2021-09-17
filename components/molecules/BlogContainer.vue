@@ -51,4 +51,9 @@ export default {};
   font-weight: 500;
   padding: 0px 0px 10px 0px;
 }
+@media (max-width: 600px) {
+  .blog-container {
+    width: 80%;
+  }
+}
 </style>
