@@ -1,5 +1,9 @@
 <template>
-  <div class="qolor"></div>
+  <div class="qolor">
+    <div class="pallete-list">
+      
+    </div>
+  </div>
 </template>
 <script>
 export default {
@@ -114,6 +118,10 @@ export default {
 </script>
 <style scoped>
 .qolor {
-  /* padding: 20px; */
+  width: 100%;
+}
+.pallete-list{
+  width: 90%;
+  margin: auto;
 }
 </style>

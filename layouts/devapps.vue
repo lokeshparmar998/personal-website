@@ -3,7 +3,7 @@
 </template>
 <style scoped>
 .fullheight {
-  width: 100vw;
+  width: 100wh;
   height: 100vh;
   background-color: #12181b;
 }
