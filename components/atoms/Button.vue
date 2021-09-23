@@ -56,6 +56,9 @@ export default {
 .size50 {
   width: 50%;
 }
+.size100 {
+  width: 100%;
+}
 @media (max-width: 600px) {
   .primary {
     color: white;
