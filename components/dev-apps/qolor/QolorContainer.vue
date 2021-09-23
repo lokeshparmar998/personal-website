@@ -1,10 +1,10 @@
 <template>
   <div class="qolor-container">
     <div class="color-choices">
-      <div class="c1"></div>
-      <div class="c2"></div>
-      <div class="c3"></div>
-      <div class="c4"></div>
+      <div class="r1" :style="`background-color: ${row1}`"></div>
+      <div class="r2" :style="`background-color: ${row2}`"></div>
+      <div class="r3" :style="`background-color: ${row3}`"></div>
+      <div class="r4" :style="`background-color: ${row4}`"></div>
     </div>
     <Button :button="saveButton" v-on:operation="saveColor" />
   </div>
@@ -27,7 +27,14 @@ export default {
         navigation: "none",
         operation: true,
       },
+    row1:null,
+    row2:null,
+    row3:null,
+    row4:null
     };
+  },
+  created(){
+      [this.row1,this.row2,this.row3,this.row4] = [...this.qolor.colors]
   },
   methods: {
     saveColor() {
@@ -54,24 +61,20 @@ export default {
   flex-direction: column;
   height: 230px;
 }
-.c1 {
+.r1 {
   flex-grow: 3;
   cursor: pointer;
-  background-color: teal;
 }
-.c2 {
+.r2 {
   flex-grow: 2;
   cursor: pointer;
-  background-color: thistle;
 }
-.c3 {
+.r3 {
   flex-grow: 1;
   cursor: pointer;
-  background-color: tomato;
 }
-.c4 {
+.r4 {
   flex-grow: 1;
   cursor: pointer;
-  background-color: turquoise;
 }
 </style>
