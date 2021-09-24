@@ -19,7 +19,7 @@ export default {
       qolorList: [
         {
           id: 1,
-          saved: false,
+          saved: true,
           colors: ["#FF6263", "#DE4839", "#BF3325", "#E21717"],
         },
         {
@@ -156,15 +156,6 @@ export default {
   margin: auto;
   display: flex;
   flex-wrap: wrap;
-}
-@media (max-width: 600px){
-  .pallete{
-    display: flex;
-    justify-content: center;
-  }
-  .pallete-list{
-    display: flex;
-    flex-direction: column;
-  }
+  justify-content: center;
 }
 </style>
