@@ -12,13 +12,8 @@
 
     <SideBarIcons :icon="icons.about" route="/" />
     <SideBarIcons :icon="icons.skills" route="skills" />
-    <!-- <SideBarIcons :icon="icons.projects" route="projects" /> -->
+    <SideBarIcons :icon="icons.projects" route="projects" />
     <SideBarIcons :icon="icons.contact" route="contact" />
-    <SideBarIcons
-      :icon="icons.dev_tools"
-      route="tools"
-      class="responsive-show"
-    />
     <SideBarIcons :icon="icons.blog" route="blogs" />
   </div>
 </template>

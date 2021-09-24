@@ -1,29 +1,34 @@
 <template>
   <div class="tool-container">
     <div class="tool-image">
-      <img src="~/assets/images/dev-apps/qolor.png" alt="" />
+      <img :src="`${toolImage}`" alt="tool logo" />
     </div>
     <div class="tool-name">
-        QOLOR
+      {{ tool.name }}
     </div>
     <div class="tool-description">
-        this is the tool description for the dev tool qolor which i will update later.
+      {{ tool.description }}
     </div>
   </div>
 </template>
 <script>
 import Tag from "@/components/atoms/Tag.vue";
+const Qolor = require("~/assets/images/dev-apps/qolor.png");
 export default {
   components: {
     Tag,
   },
   props: {
-    tag: Object,
+    tool: Object,
   },
   data: function () {
     return {
-      tag: {},
+      toolImage: null,
     };
+  },
+  created() {
+    let myHash = new Map([["qolor", Qolor]]);
+    this.toolImage = myHash.get(this.tool.logo);
   },
 };
 </script>
@@ -38,8 +43,8 @@ export default {
   border: 1px solid #2c405a;
   cursor: pointer;
 }
-.tool-container:hover{
-    border: 1px solid #11C0BD;
+.tool-container:hover {
+  border: 1px solid #11c0bd;
 }
 .tool-image {
   display: flex;
@@ -53,20 +58,20 @@ export default {
 .tool-image img {
   width: 150px;
 }
-.tool-name{
-    text-align: center;
-    font-size: 19px;
-    font-family: 'inter',sans-serif;
-    font-weight: 600;
-    color: #eeeeee;
-    margin-bottom: 8px;
+.tool-name {
+  text-align: center;
+  font-size: 19px;
+  font-family: "inter", sans-serif;
+  font-weight: 600;
+  color: #eeeeee;
+  margin-bottom: 8px;
 }
-.tool-description{
-    color: #eeeeee;
-    opacity: 0.8;
-    text-align: center;
-    font-weight: 500;
-    font-family: 'inter',sans-serif;
-    font-size: 14px;
+.tool-description {
+  color: #eeeeee;
+  opacity: 0.8;
+  text-align: center;
+  font-weight: 500;
+  font-family: "inter", sans-serif;
+  font-size: 14px;
 }
 </style>
