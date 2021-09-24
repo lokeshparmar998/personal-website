@@ -1,5 +1,5 @@
 <template>
-  <div class="tool-container">
+  <div class="tool-container" @click="goto">
     <div class="tool-image">
       <img :src="`${toolImage}`" alt="tool logo" />
     </div>
@@ -29,6 +29,12 @@ export default {
   created() {
     let myHash = new Map([["qolor", Qolor]]);
     this.toolImage = myHash.get(this.tool.logo);
+  },
+  methods: {
+    goto() {
+      const routeData = this.$router.resolve({ path: this.tool.route });
+      window.open(routeData.href, "_blank");
+    },
   },
 };
 </script>

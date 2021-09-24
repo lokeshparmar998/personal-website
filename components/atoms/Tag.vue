@@ -1,5 +1,3 @@
 <template>
-    <div>
-        tags
-    </div>
+  <div>tags</div>
 </template>

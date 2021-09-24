@@ -15,7 +15,7 @@ export default {
   components: {
     BlogContainer,
   },
-  async fetch(){
+  async fetch() {
     let query = `{
   user(username: "lokeshparmar998") {
     publication {
@@ -28,7 +28,7 @@ export default {
     }
   }
 }
-`
+`;
     /* await this.$axios.$post('https://api.hashnode.com',{
       body:
         JSON.stringify({
@@ -43,7 +43,7 @@ export default {
     }).catch(err =>{
       console.log(err)
     }) */
-  }
+  },
 };
 </script>
 <style scoped>

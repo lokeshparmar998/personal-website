@@ -7,14 +7,14 @@
 <script>
 import Header from "@/components/dev-apps/shared/Header.vue";
 export default {
-  components:{
-    Header
+  components: {
+    Header,
   },
-  computed:{
-    header(){
-      return this.$store.state.devAppHeader.header
-    }
-  }
+  computed: {
+    header() {
+      return this.$store.state.devAppHeader.header;
+    },
+  },
 };
 </script>
 <style scoped>

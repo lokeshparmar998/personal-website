@@ -2,7 +2,7 @@
   <header>
     <div class="header-branding">
       <div class="logo">
-          <img src="~/assets/images/dev-apps/qolor.png" alt="">
+        <img src="~/assets/images/dev-apps/qolor.png" alt="" />
       </div>
       <div class="buy-me-coffee">
         <a href="https://www.buymeacoffee.com/lokeshparmar998" target="_blank">
@@ -31,19 +31,19 @@ export default {
 <style scoped>
 header {
   width: 100wh;
-  padding: 15px
+  padding: 15px;
 }
 .header-branding {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
-.buy-me-coffee a img{
-    border-radius: 50%;
-    width: 50px;
+.buy-me-coffee a img {
+  border-radius: 50%;
+  width: 50px;
 }
-.logo img{
-    width: 150px;
-    cursor: pointer;
+.logo img {
+  width: 150px;
+  cursor: pointer;
 }
 </style>

@@ -88,7 +88,7 @@ export default {
     },
     async copyToClipboard(code) {
       await navigator.clipboard.writeText(code);
-      console.log(`Code Copies ${code} 😎`)
+      console.log(`Code Copies ${code} 😎`);
     },
   },
 };

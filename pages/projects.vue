@@ -2,7 +2,7 @@
   <div class="tools">
     <div class="page-header">Tools & Projects</div>
     <div class="apps">
-      <div v-for="(app, i) in devApps" :key="i" style="width:min-content">
+      <div v-for="(app, i) in devApps" :key="i" style="width: min-content">
         <DevAppContainer :tool="app" />
       </div>
     </div>

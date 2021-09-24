@@ -1,7 +1,7 @@
 <template>
   <div class="qolor">
     <div class="pallete-list">
-      <div class="pallete" v-for="(qolor,i) in qolorList" :key="i">
+      <div class="pallete" v-for="(qolor, i) in qolorList" :key="i">
         <QolorContainer :qolor="qolor" />
       </div>
     </div>
@@ -14,13 +14,13 @@ export default {
   components: {
     QolorContainer,
   },
-  created(){
+  created() {
     let header = {
-      title: 'Qolor',
-      sub_title: 'Never go wrong with colors!'
-    }
-    this.$store.commit('devAppHeader/SET_HEADER',header)
-  },  
+      title: "Qolor",
+      sub_title: "Never go wrong with colors!",
+    };
+    this.$store.commit("devAppHeader/SET_HEADER", header);
+  },
   data: function () {
     return {
       qolorList: [
