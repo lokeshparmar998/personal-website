@@ -43,7 +43,7 @@ header {
     width: 50px;
 }
 .logo img{
-    width: 100px;
+    width: 150px;
     cursor: pointer;
 }
 </style>

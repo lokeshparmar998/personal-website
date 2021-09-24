@@ -32,7 +32,8 @@ export default {
     "~/assets/css/main.css",
     "~/assets/fonts/lato/lato.css",
     "~/assets/fonts/nunito/nunito.css",
-    "~/assets/fonts/raleway/raleway.css"
+    "~/assets/fonts/raleway/raleway.css",
+    "~/assets/fonts/inter/inter.css"
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
