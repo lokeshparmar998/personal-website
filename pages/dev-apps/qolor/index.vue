@@ -14,6 +14,13 @@ export default {
   components: {
     QolorContainer,
   },
+  created(){
+    let header = {
+      title: 'Qolor',
+      sub_title: 'Never go wrong with colors!'
+    }
+    this.$store.commit('devAppHeader/SET_HEADER',header)
+  },  
   data: function () {
     return {
       qolorList: [
