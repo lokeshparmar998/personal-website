@@ -52,7 +52,6 @@
           ></textarea>
         </div>
         <Button :button="submissionButton" v-on:operation="formSubmission" />
-
         <div class="divider">
           <hr />
           Or
@@ -63,11 +62,11 @@
           <a href="https://www.linkedin.com/in/lokesh-parmar/" target="_blank"
             ><img src="~/assets/images/social/linkedin.svg" alt=""
           /></a>
-          <a href="https://github.com/lokeshparmar998" target="_blank"
-            ><img src="~/assets/images/social/github.svg" alt=""
-          /></a>
           <a href="https://twitter.com/lokeshparmar998" target="_blank"
             ><img src="~/assets/images/social/twitter.svg" alt=""
+          /></a>
+          <a href="https://github.com/lokeshparmar998" target="_blank"
+            ><img src="~/assets/images/social/github.svg" alt=""
           /></a>
         </div>
       </div>
@@ -97,16 +96,63 @@ export default {
   },
   methods: {
     formSubmission() {
+      let that = this;
+      const pattern = RegExp("[a-zA-Z0-9._-]+@[a-z]+");
+      if (this.first_name == null || this.first_name == "") {
+        this.$toast.error("Please enter first name!!", {
+          position: "top-center",
+          duration: 2000,
+        });
+        return;
+      }
+      if (this.email == null || this.email == "") {
+        this.$toast.error("Please enter email!!", {
+          position: "top-center",
+          duration: 2000,
+        });
+        return;
+      }
+      if (this.email == "test@gmail.com" || this.email == "testing@gmail.com") {
+        this.$toast.error("No test email allowed 😜", {
+          position: "top-center",
+          duration: 2000,
+        });
+        return;
+      }
+      if (!pattern.test(this.email)) {
+        this.$toast.error("Invalid email!!", {
+          position: "top-center",
+          duration: 2000,
+        });
+        return;
+      }
+      if (this.message == null || this.message == "") {
+        this.$toast.error("Please enter message", {
+          position: "top-center",
+          duration: 2000,
+        });
+        return;
+      }
       this.$axios
         .$post("https://formspree.io/f/xbjqbekv", {
-          name: "test",
-          email: "testing@gmail.com",
+          first_name: this.first_name,
+          last_name: this.last_name,
+          mobile: this.mobile,
+          email: this.email,
+          message: this.message,
         })
         .then((res) => {
-          console.log("submitted");
+          that.$toast.success("Message sent!", {
+            theme: "toasted-primary",
+            position: "top-right",
+            duration: 1000,
+          });
         })
         .catch((err) => {
-          console.log(err);
+          that.$toast.error("Something went wrong!!!", {
+            position: "top-center",
+            duration: 2000,
+          });
         });
     },
   },
