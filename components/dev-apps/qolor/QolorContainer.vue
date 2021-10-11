@@ -89,6 +89,11 @@ export default {
     async copyToClipboard(code) {
       await navigator.clipboard.writeText(code);
       console.log(`Code Copies ${code} 😎`);
+      this.$toast.success(`Code Copied 😎`, {
+        theme: "toasted-primary",
+        position: "top-center",
+        duration: 1000,
+      });
     },
   },
 };

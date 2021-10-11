@@ -19,16 +19,10 @@ export default {
       devApps: [
         {
           name: "Qolor",
-          description: "Never go wrong with color!! \n Click to copy color.",
+          description: "Never go wrong with colors!! \n Click to copy color.",
           logo: "qolor",
           route: "dev-apps/qolor/",
-        },
-        {
-          name: "Qolor",
-          description: "Never go wrong with color!! \n Click to copy color.",
-          logo: "qolor",
-          route: "dev-apps/qolor/",
-        },
+        }
       ],
     };
   },
