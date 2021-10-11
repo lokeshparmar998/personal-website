@@ -51,12 +51,35 @@
             v-model="message"
           ></textarea>
         </div>
+        <Button :button="submissionButton" v-on:operation="formSubmission" />
+
+        <div class="divider">
+          <hr />
+          Or
+          <hr />
+        </div>
+
+        <div class="social-media">
+          <a href="https://www.linkedin.com/in/lokesh-parmar/" target="_blank"
+            ><img src="~/assets/images/social/linkedin.svg" alt=""
+          /></a>
+          <a href="https://github.com/lokeshparmar998" target="_blank"
+            ><img src="~/assets/images/social/github.svg" alt=""
+          /></a>
+          <a href="https://twitter.com/lokeshparmar998" target="_blank"
+            ><img src="~/assets/images/social/twitter.svg" alt=""
+          /></a>
+        </div>
       </div>
     </div>
   </div>
 </template>
 <script>
+import Button from "@/components/atoms/Button.vue";
 export default {
+  components: {
+    Button,
+  },
   data: function () {
     return {
       first_name: null,
@@ -64,6 +87,12 @@ export default {
       mobile: null,
       email: null,
       message: null,
+      submissionButton: {
+        class: "secondary size45 nunito_font",
+        text: "Submit  🚀",
+        route: false,
+        operation: true,
+      },
     };
   },
   methods: {
@@ -138,9 +167,32 @@ export default {
   font-family: "nunito", sans-serif;
   outline: 0;
 }
-.required::after{
-  content: '  *';
+.required::after {
+  content: "  *";
   color: red;
+}
+.divider {
+  display: flex;
+  width: 100%;
+  color: white;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+hr {
+  width: 45%;
+  border: 1px solid #3f536e;
+}
+.social-media {
+  margin: 30px 0px 10px 0px;
+  display: flex;
+  justify-content: center;
+}
+.social-media img {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  margin-right: 10px;
 }
 @media (max-width: 600px) {
   .contact-form {
