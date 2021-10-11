@@ -4,22 +4,52 @@
     <div class="contact-form">
       <div class="form">
         <div class="field">
-          <div class="label">
-            Name
+          <div class="controller">
+            <div class="label required">First name</div>
+            <input
+              type="text"
+              class="input"
+              placeholder="Enter first name"
+              v-model="first_name"
+            />
           </div>
-          <input type="text" class="input" placeholder="Enter full name">
+          <div class="controller">
+            <div class="label">Last name</div>
+            <input
+              type="text"
+              class="input"
+              placeholder="Enter last name"
+              v-model="last_name"
+            />
+          </div>
         </div>
         <div class="field">
-          <div class="label">
-            Email
+          <div class="controller">
+            <div class="label required">Email</div>
+            <input
+              type="text"
+              class="input"
+              placeholder="Enter email"
+              v-model="email"
+            />
           </div>
-          <input type="text" class="input" placeholder="Enter email">
+          <div class="controller">
+            <div class="label">Mobile</div>
+            <input
+              type="text"
+              class="input"
+              placeholder="Enter mobile"
+              v-model="mobile"
+            />
+          </div>
         </div>
-        <div class="field">
-          <div class="label">
-            Message
-          </div>
-          <textarea class="text-area" placeholder="Enter message"></textarea>
+        <div class="area-field">
+          <div class="label required">Message</div>
+          <textarea
+            class="text-area"
+            placeholder="Enter message"
+            v-model="message"
+          ></textarea>
         </div>
       </div>
     </div>
@@ -27,29 +57,40 @@
 </template>
 <script>
 export default {
-  methods:{
-    formSubmission(){
-      let url = 'https://formspree.io/f/xbjqbekv'
-      this.$axios.$post('https://formspree.io/f/xbjqbekv',{
-        name: 'test',
-        email: 'testing@gmail.com'
-      }).then(res=>{
-        console.log('submitted')
-      }).catch(err=>{
-        console.log(err)
-      })
-    }
-  }
-}
+  data: function () {
+    return {
+      first_name: null,
+      last_name: null,
+      mobile: null,
+      email: null,
+      message: null,
+    };
+  },
+  methods: {
+    formSubmission() {
+      this.$axios
+        .$post("https://formspree.io/f/xbjqbekv", {
+          name: "test",
+          email: "testing@gmail.com",
+        })
+        .then((res) => {
+          console.log("submitted");
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    },
+  },
+};
 </script>
 <style scoped>
-.contact-form{
+.contact-form {
   width: 80%;
   margin: auto;
   display: flex;
   justify-content: center;
 }
-.form{
+.form {
   width: 60%;
   background-color: #2c405a;
   border: 1px solid #3f536e;
@@ -57,18 +98,27 @@ export default {
   padding: 20px;
   margin-top: 20px;
 }
-.field{
+.field {
+  width: 100%;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+.area-field {
   width: 100%;
   margin-bottom: 25px;
 }
-.label{
+.controller {
+  width: 45%;
+}
+.label {
   color: white;
   font-size: 16px;
   font-family: "nunito", sans-serif;
   margin-bottom: 5px;
 }
-.input{
-  width: 40%;
+.input {
+  width: 100%;
   height: 30px;
   background-color: #2c405a;
   color: white;
@@ -77,7 +127,7 @@ export default {
   border-bottom: 2px solid white;
   font-family: "nunito", sans-serif;
 }
-.text-area{
+.text-area {
   background-color: #2c405a;
   width: 100%;
   height: 30px;
@@ -88,18 +138,31 @@ export default {
   font-family: "nunito", sans-serif;
   outline: 0;
 }
+.required::after{
+  content: '  *';
+  color: red;
+}
 @media (max-width: 600px) {
-.contact-form{
-  width: 100%;
-}
-.form{
-  width: 80%;
-}
-.input{
-  width: 100%;
-}
-.text-area{
-  width: 100%;
-}
+  .contact-form {
+    width: 100%;
+  }
+  .form {
+    width: 80%;
+  }
+  .input {
+    width: 100%;
+  }
+  .text-area {
+    width: 100%;
+  }
+  .field {
+    width: 100%;
+    margin-bottom: 25px;
+    display: block;
+  }
+  .controller {
+    width: 100%;
+    margin-top: 25px;
+  }
 }
 </style>
