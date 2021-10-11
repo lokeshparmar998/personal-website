@@ -1,43 +1,48 @@
-body{
-    margin: 0px;
-    background-image: url("../background/background.svg");
-    background-size: 100%;
-    background-color: #25374f;
-    background-position: center top;
+body {
+  margin: 0px;
+  background-image: url("../background/background.svg");
+  background-size: 100%;
+  background-color: #25374f;
+  background-position: center top;
 }
-.page-header{
-    text-align: center;
-    font-size: 30px;
-    font-family: 'inter',sans-serif;
-    letter-spacing: 0.5px;
-    color: white;
-    margin-top: 50px;
-    font-weight: bold;
+.page-header {
+  text-align: center;
+  font-size: 30px;
+  font-family: "inter", sans-serif;
+  letter-spacing: 0.5px;
+  color: white;
+  margin-top: 50px;
+  font-weight: bold;
 }
 
-.bg-primary{
-    background-color: #2c405a;
+.bg-primary {
+  background-color: #2c405a;
 }
-.bg-secondary{
-    background-color: #273950;
+.bg-secondary {
+  background-color: #273950;
 }
 
 /* width */
 ::-webkit-scrollbar {
-    width: 10px;
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #2c405a;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #11c0bd;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+@media (max-width: 600px) {
+  .page-header {
+    font-size: 20px;
   }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: #2C405A; 
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #11C0BD; 
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555; 
-  }
+}
