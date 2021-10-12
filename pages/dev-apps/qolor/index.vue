@@ -17,14 +17,15 @@ export default {
   head: {
     title: `Qolor ✔️`,
     meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { charset: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
       {
-        hid: 'description',
-        name: 'description',
-        content: 'Never go wrong with colors again qolor. Choose perfect colors from thousands of colors and make great projects.'
-      }
-    ]
+        hid: "description",
+        name: "description",
+        content:
+          "Never go wrong with colors again qolor. Choose perfect colors from thousands of colors and make great projects.",
+      },
+    ],
   },
   created() {
     let header = {

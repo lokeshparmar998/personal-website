@@ -16,21 +16,21 @@ export default {
   props: {
     blog: Object,
   },
-  data:function(){
-    return{
-      sub_title: ''
-    }
+  data: function () {
+    return {
+      sub_title: "",
+    };
   },
-  created(){
-    this.sub_title = this.blog.brief
-    if(this.sub_title.length>30)
-      this.sub_title = this.sub_title.substring(0,130) + '...'
+  created() {
+    this.sub_title = this.blog.brief;
+    if (this.sub_title.length > 30)
+      this.sub_title = this.sub_title.substring(0, 130) + "...";
   },
-  methods:{
-    goto(){
-      window.open(`https://blog.lokeshparmar998.tech/${this.blog.slug}`)
-    }
-  }
+  methods: {
+    goto() {
+      window.open(`https://blog.lokeshparmar998.tech/${this.blog.slug}`);
+    },
+  },
 };
 </script>
 <style scoped>
@@ -38,7 +38,7 @@ export default {
   width: 20%;
   min-width: 200px;
   padding: 20px;
-  margin:10px;
+  margin: 10px;
   border-radius: 5px;
   cursor: pointer;
 }

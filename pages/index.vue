@@ -45,14 +45,15 @@ export default {
   head: {
     title: `Lokesh | Lokesh's bio 🤓`,
     meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { charset: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
       {
-        hid: 'description',
-        name: 'description',
-        content: 'Lokesh is a javascript developer based in Gurugram, Haryana, India. He loves to work with JS frameworks.'
-      }
-    ]
+        hid: "description",
+        name: "description",
+        content:
+          "Lokesh is a javascript developer based in Gurugram, Haryana, India. He loves to work with JS frameworks.",
+      },
+    ],
   },
   data: function () {
     return {
