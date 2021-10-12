@@ -12,6 +12,18 @@ export default {
   components: {
     BlogContainer,
   },
+  head: {
+    title: `Lokesh | Lokesh's blogs 🤖`,
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Blogs on javascript and related topics.'
+      }
+    ]
+  },
   data: function () {
     return {
       blogs: [],

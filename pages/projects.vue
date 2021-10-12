@@ -14,6 +14,18 @@ export default {
   components: {
     DevAppContainer,
   },
+  head: {
+    title: `Lokesh | Lokesh's projects 🦾`,
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Projects and tools for frontend developers.'
+      }
+    ]
+  },
   data: function () {
     return {
       devApps: [
