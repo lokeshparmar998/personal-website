@@ -6,7 +6,7 @@
     <div class="blog-details">
       <div class="tilte">{{ blog.title }}</div>
       <div class="sub-title">
-        {{ blog.brief }}
+        {{ sub_title }}
       </div>
     </div>
   </div>
@@ -15,6 +15,16 @@
 export default {
   props: {
     blog: Object,
+  },
+  data:function(){
+    return{
+      sub_title: ''
+    }
+  },
+  created(){
+    this.sub_title = this.blog.brief
+    if(this.sub_title.length>30)
+      this.sub_title = this.sub_title.substring(0,130) + '...'
   },
   methods:{
     goto(){
@@ -25,10 +35,10 @@ export default {
 </script>
 <style scoped>
 .blog-container {
-  width: 50%;
+  width: 20%;
+  min-width: 200px;
   padding: 20px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin:10px;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -38,11 +48,11 @@ export default {
   justify-content: center;
 }
 .blog-image img {
-  width: 80%;
+  width: 100%;
 }
 .tilte {
   text-align: center;
-  font-size: 25px;
+  font-size: 20px;
   color: #fff;
   font-family: "raleway", sans-serif;
   font-weight: bold;
@@ -51,7 +61,7 @@ export default {
 }
 .sub-title {
   text-align: center;
-  font-size: 20px;
+  font-size: 15px;
   color: #b2becd;
   font-family: "raleway", sans-serif;
   font-weight: 500;

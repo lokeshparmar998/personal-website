@@ -54,8 +54,10 @@ export default {
 </script>
 <style scoped>
 .blog-list {
+  width: 80%;
+  margin: auto;
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
+  margin-top: 30px;
 }
 </style>
