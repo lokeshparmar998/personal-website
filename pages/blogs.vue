@@ -1,11 +1,8 @@
 <template>
   <div class="blogs">
     <div class="page-header">Blogs</div>
-    <div class="blog-list">
-      <BlogContainer />
-    </div>
-    <div class="blog-list">
-      <BlogContainer />
+    <div class="blog-list" v-for="(blog, x) in blogs" :key="x">
+      <BlogContainer :blog="blog" />
     </div>
   </div>
 </template>
@@ -15,34 +12,43 @@ export default {
   components: {
     BlogContainer,
   },
+  data: function () {
+    return {
+      blogs: [],
+      show: false,
+    };
+  },
   async fetch() {
-    let query = `{
-  user(username: "lokeshparmar998") {
-    publication {
-      posts(page: 0) {
-        title
-        brief
-        slug
-        coverImage
-      }
+    let that = this;
+    await this.$axios({
+      url: "https://api.hashnode.com/graphql",
+      method: "post",
+      data: {
+        query: `{user(username: "lokeshparmar998") {
+                      publication {
+                      posts(page: 0) {
+                      title
+                      brief
+                      slug
+                      coverImage
+                    }
     }
-  }
-}
-`;
-    /* await this.$axios.$post('https://api.hashnode.com',{
-      body:
-        JSON.stringify({
-          query:
-        }),
+  }}`,
+      },
       headers: {
-          'Content-Type': 'application/json',
-          'Authorization': '90101ee6-ddff-40e0-a121-4e44f9682bcc'
-        },
-    }).then(res =>{
-      console.log(res.data)
-    }).catch(err =>{
-      console.log(err)
-    }) */
+        "Content-Type": "application/json",
+        Authorization: this.$config.hashnodeApiKey,
+      },
+    })
+      .then((res) => {
+        that.blogs = res.data.data.user.publication.posts;
+      })
+      .catch((err) => {
+        that.$toast.error("Something went wrong 😅", {
+          position: "top-center",
+          duration: 2000,
+        });
+      });
   },
 };
 </script>
@@ -50,5 +56,6 @@ export default {
 .blog-list {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 </style>

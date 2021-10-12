@@ -1,30 +1,36 @@
 <template>
-  <div class="blog-container bg-primary">
+  <div class="blog-container bg-primary" @click="goto">
     <div class="blog-image">
-      <img
-        src="https://cdn.hashnode.com/res/hashnode/image/upload/v1631614145296/VPSeT3V51.png"
-        alt=""
-        srcset=""
-      />
+      <img :src="blog.coverImage" alt="" srcset="" />
     </div>
     <div class="blog-details">
-      <div class="tilte">This is a center aligned title</div>
+      <div class="tilte">{{ blog.title }}</div>
       <div class="sub-title">
-        These are sub title which will give a little more about the blog.
+        {{ blog.brief }}
       </div>
     </div>
   </div>
 </template>
 <script>
-export default {};
+export default {
+  props: {
+    blog: Object,
+  },
+  methods:{
+    goto(){
+      window.open(`https://blog.lokeshparmar998.tech/${this.blog.slug}`)
+    }
+  }
+};
 </script>
 <style scoped>
 .blog-container {
-  width: 60%;
+  width: 50%;
   padding: 20px;
   margin-top: 10px;
   margin-bottom: 10px;
   border-radius: 5px;
+  cursor: pointer;
 }
 .blog-image {
   width: 100%;

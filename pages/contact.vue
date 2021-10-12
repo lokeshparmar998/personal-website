@@ -134,7 +134,7 @@ export default {
         return;
       }
       this.$axios
-        .$post("https://formspree.io/f/xbjqbekv", {
+        .$post(this.$config.formspeerUrl, {
           first_name: this.first_name,
           last_name: this.last_name,
           mobile: this.mobile,

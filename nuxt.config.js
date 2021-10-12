@@ -23,9 +23,10 @@ export default {
   publicRuntimeConfig: {
     googleAnalytics: {
       id: 'UA-207883981-1'
-    }
+    },
+    hashnodeApiKey: process.env.HASHNODE_API_KEY,
+    formspeerUrl: process.env.FORM_URL
   },
-
   /*  */
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
