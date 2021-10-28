@@ -10,7 +10,7 @@
       {{ tool.description }}
     </div>
     <div class="tags">
-      <div v-for="(tag,i) in tool.tags" :key="i">
+      <div v-for="(tag, i) in tool.tags" :key="i">
         <Tag :tag="tag" />
       </div>
     </div>
@@ -85,9 +85,10 @@ export default {
   font-family: "inter", sans-serif;
   font-size: 14px;
 }
-.tags{
+.tags {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   margin-top: 10px;
 }
 </style>

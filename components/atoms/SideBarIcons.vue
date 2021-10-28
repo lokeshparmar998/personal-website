@@ -2,7 +2,7 @@
   <div class="icon-container">
     <fa :icon="icon.icon" class="icon" @click="goto()" />
     <div class="icon-popper">
-      {{icon.name}}
+      {{ icon.name }}
     </div>
   </div>
 </template>
@@ -30,15 +30,15 @@ export default {
   color: #b2becd;
   font-size: 30px;
 }
-.icon:hover{
+.icon:hover {
   color: #11c0bd;
   cursor: pointer;
 }
-.icon-container:hover .icon-popper{
+.icon-container:hover .icon-popper {
   visibility: visible;
   cursor: pointer;
 }
-.icon-popper{
+.icon-popper {
   visibility: hidden;
   color: #b2becd;
   font-family: "inter", sans-serif;

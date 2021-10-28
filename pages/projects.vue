@@ -34,7 +34,7 @@ export default {
           description: "Never go wrong with colors!! \n Click to copy color.",
           logo: "qolor",
           route: "dev-apps/qolor/",
-          tags: ['Free 🔥', 'Tool 🛠️']
+          tags: ["Free 🔥", "Tool 🛠️"],
         },
       ],
     };
@@ -50,7 +50,7 @@ export default {
   flex-wrap: wrap;
 }
 @media (max-width: 600px) {
-  .apps{
+  .apps {
     width: 100%;
     justify-content: center;
   }
