@@ -34,6 +34,7 @@ export default {
           description: "Never go wrong with colors!! \n Click to copy color.",
           logo: "qolor",
           route: "dev-apps/qolor/",
+          tags: ['Free 🔥', 'Tool 🛠️']
         },
       ],
     };

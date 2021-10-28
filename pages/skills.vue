@@ -1,13 +1,15 @@
 <template>
   <div class="skills">
     <div class="page-header">My Skill set</div>
-
     <div class="skill-set">
-      <img src="~/assets/images/skills/html.svg" alt="" />
-      <img src="~/assets/images/skills/css.svg" alt="" />
-      <img src="~/assets/images/skills/javascript.svg" alt="" />
-      <img src="~/assets/images/skills/nuxt.svg" alt="" />
-      <img src="~/assets/images/skills/vue.svg" alt="" />
+      <img src="~/assets/images/skills/html.svg" alt="html icon" />
+      <img src="~/assets/images/skills/css.svg" alt="css icon" />
+      <img src="~/assets/images/skills/javascript.svg" alt="js icon" />
+      <img src="~/assets/images/skills/nuxt.svg" alt="nuxt icon" />
+      <img src="~/assets/images/skills/vue.svg" alt="vue icon" />
+      <img src="~/assets/images/skills/git.svg" alt="git icon" />
+      <img src="~/assets/images/skills/github.svg" alt="github icon" />
+      <img src="~/assets/images/skills/adobexd.svg" alt="adobexd icon" />
     </div>
   </div>
 </template>
