@@ -10,11 +10,9 @@
       <img v-show="!showGif" src="~/assets/images/logo.svg" alt="" />
     </div>
 
-    <SideBarIcons :icon="icons.about" route="/" />
-    <SideBarIcons :icon="icons.skills" route="skills" />
-    <SideBarIcons :icon="icons.projects" route="projects" />
-    <SideBarIcons :icon="icons.contact" route="contact" />
-    <SideBarIcons :icon="icons.blog" route="blogs" />
+    <div v-for="(icon, i) in icons" :key="i">
+      <SideBarIcons :icon="icon" />
+    </div>
   </div>
 </template>
 <script>
@@ -35,14 +33,33 @@ export default {
   },
   data: function () {
     return {
-      icons: {
-        about: "user",
-        skills: "terminal",
-        projects: "project-diagram",
-        contact: "envelope",
-        dev_tools: "qrcode",
-        blog: "cubes",
-      },
+      icons: [
+        {
+          icon: "user",
+          name: "About",
+          route: "/",
+        },
+        {
+          icon: "terminal",
+          name: "Skills",
+          route: "skills",
+        },
+        {
+          icon: "project-diagram",
+          name: "Projects",
+          route: "projects",
+        },
+        {
+          icon: "envelope",
+          name: "Contact",
+          route: "contact",
+        },
+        {
+          icon: "cubes",
+          name: "Blogs",
+          route: "blogs",
+        },
+      ],
       gif: null,
       showGif: false,
     };
@@ -92,9 +109,6 @@ export default {
     justify-content: space-between;
     width: 100%;
     height: 70px;
-  }
-  .responsive-show {
-    display: none;
   }
 }
 </style>

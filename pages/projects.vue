@@ -49,4 +49,10 @@ export default {
   display: flex;
   flex-wrap: wrap;
 }
+@media (max-width: 600px) {
+  .apps{
+    width: 100%;
+    justify-content: center;
+  }
+}
 </style>
