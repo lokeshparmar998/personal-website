@@ -25,6 +25,7 @@ export default {
   margin-bottom: 10px;
   display: grid;
   place-items: center;
+  position: relative;
 }
 .icon {
   color: #b2becd;
@@ -43,6 +44,37 @@ export default {
   color: #b2becd;
   font-family: "inter", sans-serif;
   font-size: 14px;
-  margin-top: -15px;
+  z-index: 2;
+  position: absolute;
+  background-color: black;
+  padding: 2px 4px 2px 4px;
+  border-radius: 5px;
+  left: 65px;
+}
+.icon-popper::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent black transparent transparent;
+}
+@media screen and (max-width: 600px) {
+  .icon-popper {
+    top: 60px;
+    left: 10px;
+  }
+  .icon-popper::after {
+    content: "";
+    position: absolute;
+    top: 0%;
+    right: 50%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent black transparent transparent;
+  }
 }
 </style>
