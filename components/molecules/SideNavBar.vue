@@ -39,11 +39,11 @@ export default {
           name: "About",
           route: "/",
         },
-        {
+        /* {
           icon: "terminal",
           name: "Skills",
           route: "skills",
-        },
+        }, */
         {
           icon: "project-diagram",
           name: "Projects",
