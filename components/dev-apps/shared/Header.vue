@@ -44,6 +44,6 @@ header {
 }
 .logo img {
   width: 150px;
-  cursor: url("~/assets/images/shared/pointer-cursor.svg"),auto;
+  cursor: url("~/assets/images/shared/pointer-cursor.svg"), auto;
 }
 </style>

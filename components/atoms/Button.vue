@@ -27,7 +27,7 @@ export default {
   border-radius: 4px;
   padding: 10px 24px;
   font-size: 15px;
-  cursor: url("~/assets/images/shared/pointer-cursor.svg"),auto;
+  cursor: url("~/assets/images/shared/pointer-cursor.svg"), auto;
 }
 .secondary {
   color: white;
@@ -36,7 +36,7 @@ export default {
   border-radius: 4px;
   padding: 10px 24px;
   font-size: 15px;
-  cursor: url("~/assets/images/shared/pointer-cursor.svg"),auto;
+  cursor: url("~/assets/images/shared/pointer-cursor.svg"), auto;
 }
 .nunito_font {
   font-family: "nunito", sans-serif;
@@ -67,7 +67,7 @@ export default {
     border-radius: 4px;
     padding: 10px 12px;
     font-size: 13px;
-    cursor: url("~/assets/images/shared/pointer-cursor.svg"),auto;
+    cursor: url("~/assets/images/shared/pointer-cursor.svg"), auto;
   }
   .secondary {
     color: white;
@@ -76,7 +76,7 @@ export default {
     border-radius: 4px;
     padding: 5px 12px;
     font-size: 13px;
-    cursor: url("~/assets/images/shared/pointer-cursor.svg"),auto;
+    cursor: url("~/assets/images/shared/pointer-cursor.svg"), auto;
   }
   .size20 {
     width: 50%;

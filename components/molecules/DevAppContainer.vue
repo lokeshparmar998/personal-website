@@ -52,7 +52,7 @@ export default {
   padding: 10px;
   margin: 10px;
   border: 1px solid #2c405a;
-  cursor: url("~/assets/images/shared/pointer-cursor.svg"),auto;
+  cursor: url("~/assets/images/shared/pointer-cursor.svg"), auto;
 }
 .tool-container:hover {
   border: 1px solid #11c0bd;

@@ -140,7 +140,7 @@ export default {
 .social-media img {
   width: 40px;
   height: 40px;
-  cursor: url("~/assets/images/shared/pointer-cursor.svg"),auto;
+  cursor: url("~/assets/images/shared/pointer-cursor.svg"), auto;
 }
 .profile-footer {
   background-color: #273950;

@@ -2,7 +2,7 @@
   <div class="blogs">
     <div class="page-header">Blogs</div>
     <div class="loader" v-if="show">
-      <img src="~/assets/images/shared/loader.svg" alt="">
+      <img src="~/assets/images/shared/loader.svg" alt="" />
     </div>
     <div class="blog-list">
       <div v-for="(blog, x) in blogs" :key="x">
@@ -74,9 +74,9 @@ export default {
 .loader {
   position: absolute;
   top: 50%;
-  right: calc(50% - 25px)
+  right: calc(50% - 25px);
 }
-.loader img{
+.loader img {
   width: 50px;
 }
 .blog-list {

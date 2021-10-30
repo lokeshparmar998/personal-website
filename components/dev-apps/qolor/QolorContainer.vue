@@ -120,7 +120,7 @@ export default {
 .r2,
 .r3,
 .r4 {
-  cursor: url("~/assets/images/shared/pointer-cursor.svg"),auto;
+  cursor: url("~/assets/images/shared/pointer-cursor.svg"), auto;
   position: relative;
 }
 .r1 {

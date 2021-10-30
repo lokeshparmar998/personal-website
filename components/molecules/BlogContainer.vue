@@ -40,7 +40,7 @@ export default {
   padding: 20px;
   margin: 10px;
   border-radius: 5px;
-  cursor: url("~/assets/images/shared/pointer-cursor.svg"),auto;
+  cursor: url("~/assets/images/shared/pointer-cursor.svg"), auto;
 }
 .blog-image {
   width: 100%;

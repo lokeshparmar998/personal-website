@@ -6,9 +6,14 @@
         :src="require(`@/assets/images/skills/${name}.svg`)"
         alt="adobexd icon"
       /> -->
-      <div class="" style="background-color:yellow;" v-for="(skill,i) in skills" :key="i">
+      <div
+        class=""
+        style="background-color: yellow"
+        v-for="(skill, i) in skills"
+        :key="i"
+      >
         <div>
-          {{skill.name}}
+          {{ skill.name }}
         </div>
       </div>
     </div>
