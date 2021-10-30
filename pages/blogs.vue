@@ -1,8 +1,13 @@
 <template>
   <div class="blogs">
     <div class="page-header">Blogs</div>
-    <div class="blog-list" v-for="(blog, x) in blogs" :key="x">
-      <BlogContainer :blog="blog" />
+    <div class="loader" v-if="show">
+      <img src="~/assets/images/shared/loader.svg" alt="">
+    </div>
+    <div class="blog-list">
+      <div v-for="(blog, x) in blogs" :key="x">
+        <BlogContainer :blog="blog" />
+      </div>
     </div>
   </div>
 </template>
@@ -27,7 +32,7 @@ export default {
   data: function () {
     return {
       blogs: [],
-      show: false,
+      show: true,
     };
   },
   async fetch() {
@@ -54,6 +59,7 @@ export default {
     })
       .then((res) => {
         that.blogs = res.data.data.user.publication.posts;
+        that.show = false;
       })
       .catch((err) => {
         that.$toast.error("Something went wrong 😅", {
@@ -65,6 +71,14 @@ export default {
 };
 </script>
 <style scoped>
+.loader {
+  position: absolute;
+  top: 50%;
+  right: calc(50% - 25px)
+}
+.loader img{
+  width: 50px;
+}
 .blog-list {
   width: 80%;
   margin: auto;
