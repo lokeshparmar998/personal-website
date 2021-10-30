@@ -33,11 +33,11 @@ export default {
 }
 .icon:hover {
   color: #11c0bd;
-  cursor: pointer;
+  cursor: url("~/assets/images/shared/pointer-cursor.svg"),auto;
 }
 .icon-container:hover .icon-popper {
   visibility: visible;
-  cursor: pointer;
+  cursor: url("~/assets/images/shared/pointer-cursor.svg"),auto;
 }
 .icon-popper {
   visibility: hidden;

@@ -97,7 +97,7 @@ export default {
   width: 70px;
   height: 70px;
   margin-bottom: 10px;
-  cursor: pointer;
+  cursor: url("~/assets/images/shared/pointer-cursor.svg"),auto;
 }
 .custom-logo img {
   height: 70px;

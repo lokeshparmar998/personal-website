@@ -250,7 +250,7 @@ hr {
 .social-media img {
   width: 40px;
   height: 40px;
-  cursor: pointer;
+  cursor: url("~/assets/images/shared/pointer-cursor.svg"),auto;
   margin-right: 10px;
 }
 @media (max-width: 600px) {

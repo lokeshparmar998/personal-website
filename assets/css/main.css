@@ -4,6 +4,7 @@ body {
   background-size: 100%;
   background-color: #25374f;
   background-position: center top;
+  cursor: url("../images/shared/cursor.svg"),auto;
 }
 .page-header {
   text-align: center;
