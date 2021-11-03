@@ -62,6 +62,7 @@ export default {
     // https://go.nuxtjs.dev/pwa
     "@nuxtjs/pwa",
     "@nuxtjs/toast",
+    "nuxt-vuex-localstorage"
   ],
   toast: {
       position: 'top-right',

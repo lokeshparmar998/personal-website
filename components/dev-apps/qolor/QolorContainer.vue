@@ -84,7 +84,9 @@ export default {
   },
   methods: {
     saveColorPallete() {
-      console.log("saving color");
+      this.$store.commit('localStorage/SET_QOLOR_LIST_ITEM', this.qolor)
+      if (this.qolor.saved) this.saveButton.text = "Saved ✔️";
+      else this.saveButton.text = "Save Pallete 😁";
     },
     async copyToClipboard(code) {
       await navigator.clipboard.writeText(code);

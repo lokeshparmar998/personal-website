@@ -41,6 +41,7 @@ header {
 .buy-me-coffee a img {
   border-radius: 50%;
   width: 50px;
+  cursor: url("~/assets/images/shared/pointer-cursor.svg"), auto;
 }
 .logo img {
   width: 150px;
