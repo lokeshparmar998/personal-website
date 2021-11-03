@@ -30,7 +30,7 @@ export default {
         if (item.saved) this.savedPallete.push(item);
       }
       if (this.savedPallete.length == 0)
-        this.$toast.error("No saved Pelletes", {
+        this.$toast.error("No saved Pelletes ☹️", {
           position: "bottom-center",
           duration: 3000,
         });

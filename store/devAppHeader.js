@@ -2,6 +2,7 @@ export const state = () => ({
   header: {
     title: "",
     sub_title: "",
+    show_bmc: false
   },
 });
 

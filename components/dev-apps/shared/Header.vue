@@ -5,7 +5,7 @@
         <img src="~/assets/images/dev-apps/qolor.png" alt="" />
       </div>
       <div class="buy-me-coffee">
-        <a href="https://www.buymeacoffee.com/lokeshparmar998" target="_blank">
+        <a href="https://www.buymeacoffee.com/lokeshparmar998" target="_blank" v-show="header.show_bmc">
           <img
             class="bmc-logo"
             src="https://cdn.buymeacoffee.com/uploads/profile_pictures/2020/10/61a02a6a61422f1718b2dfc60db93592.png@100w_0e.webp"
