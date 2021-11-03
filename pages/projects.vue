@@ -33,7 +33,7 @@ export default {
           name: "Qolor",
           description: "Never go wrong with colors!! \n Click to copy color.",
           logo: "qolor",
-          route: "dev-apps/qolor/",
+          route: "dev-apps/qolor/home",
           tags: ["Free 🔥", "Tool 🛠️"],
         },
       ],

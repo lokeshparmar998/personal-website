@@ -1,7 +1,7 @@
 <template>
-  <div class="pallete-list">
+  <div>
     <div class="pallete" v-for="(qolor, i) in savedPallete" :key="i">
-      <QolorContainer :qolor="qolor"/>
+      <QolorContainer :qolor="qolor" />
     </div>
   </div>
 </template>
@@ -22,24 +22,20 @@ export default {
     };
   },
   created() {
-    this.fetchList()
+    this.fetchList();
   },
-  methods:{
-    fetchList(){
+  methods: {
+    fetchList() {
       for (let item of this.qolorList) {
-      if (item.saved) this.savedPallete.push(item);
-    }
-    }
-  }
+        if (item.saved) this.savedPallete.push(item);
+      }
+      if (this.savedPallete.length == 0)
+        this.$toast.error("No saved Pelletes", {
+          position: "bottom-center",
+          duration: 3000,
+        });
+    },
+  },
 };
 </script>
-<style scoped>
-.pallete-list {
-  width: 90%;
-  margin: auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  min-height: 100vh
-}
-</style>
+<style scoped></style>

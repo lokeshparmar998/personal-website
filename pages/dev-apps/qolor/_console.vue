@@ -1,11 +1,29 @@
 <template>
   <div class="qolor">
     <div class="qolor-menu">
-      <div class="items" :class="[console == 'home' ? 'selected' : '']" @click="goto('home')">Home</div>
-      <div class="items" :class="[console == 'saved' ? 'selected' : '']" @click="goto('saved')">Saved</div>
-      <div class="items" :class="[console == 'create' ? 'selected' : '']" @click="goto('create')">Create</div>
+      <div
+        class="items"
+        :class="[console == 'home' ? 'selected' : '']"
+        @click="goto('home')"
+      >
+        Home
+      </div>
+      <div
+        class="items"
+        :class="[console == 'saved' ? 'selected' : '']"
+        @click="goto('saved')"
+      >
+        Saved
+      </div>
+      <div
+        class="items"
+        :class="[console == 'create' ? 'selected' : '']"
+        @click="goto('create')"
+      >
+        Create
+      </div>
     </div>
-    <component v-bind:is="selectedSubHeader" ></component>
+    <component v-bind:is="selectedSubHeader" class="pallete-list"></component>
   </div>
 </template>
 <script>
@@ -81,9 +99,17 @@ export default {
 .items:hover {
   cursor: url("~/assets/images/shared/pointer-cursor.svg"), auto;
 }
-.selected{
+.selected {
   background: url("~/assets/images/shared/highlight.svg");
   background-repeat: no-repeat;
   background-size: 120% 100%;
+}
+.pallete-list {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  min-height: 100vh;
 }
 </style>

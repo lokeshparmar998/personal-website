@@ -1,5 +1,5 @@
 <template>
-  <div class="pallete-list">
+  <div>
     <div class="pallete" v-for="(qolor, i) in qolorList" :key="i">
       <QolorContainer :qolor="qolor" />
     </div>
@@ -13,17 +13,9 @@ export default {
   },
   computed: {
     qolorList() {
-      return this.$store.state.localStorage.qolorList;
+      return this.$store.getters["localStorage/reversedQolorList"];
     },
   },
 };
 </script>
-<style scoped>
-.pallete-list {
-  width: 90%;
-  margin: auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-</style>
+<style scoped></style>

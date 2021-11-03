@@ -2,7 +2,7 @@ export const state = () => ({
   qolorList: [
     {
       id: 1,
-      saved: true,
+      saved: false,
       colors: ["#FF6263", "#DE4839", "#BF3325", "#E21717"],
     },
     {
@@ -129,10 +129,18 @@ export const state = () => ({
 });
 export const mutations = {
   SET_QOLOR_LIST(state, payload) {
-    state.qolorList = payload;
+    state.qolorList.push(payload);
   },
   SET_QOLOR_LIST_ITEM(state, payload) {
     for (let item of state.qolorList)
       if (item.id == payload.id) item.saved = !payload.saved;
+  },
+};
+export const getters = {
+  reversedQolorList: (state) => {
+    let reversedArray = [];
+    for (let i = state.qolorList.length - 1; i >= 0; i--)
+      reversedArray.push(state.qolorList[i]);
+    return reversedArray;
   },
 };
