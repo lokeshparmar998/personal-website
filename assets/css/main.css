@@ -9,13 +9,12 @@ body {
 .page-header {
   text-align: center;
   font-size: 30px;
-  font-family: "inter", sans-serif;
+  font-family: "nunito", sans-serif;
   letter-spacing: 0.5px;
   color: white;
   margin-top: 50px;
-  font-weight: bold;
+  font-weight: 600;
 }
-
 .bg-primary {
   background-color: #2c405a;
 }
