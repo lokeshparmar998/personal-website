@@ -1,23 +1,12 @@
 <template>
   <div class="skills">
-    <div class="page-header">My Skill set</div>
-    <div class="skill-set">
-      <!-- <img
+    <div class="page-header">My Journey</div>
+    <div class="skill-set"></div>
+  </div>
+  <!-- <img
         :src="require(`@/assets/images/skills/${name}.svg`)"
         alt="adobexd icon"
       /> -->
-      <div
-        class=""
-        style="background-color: yellow"
-        v-for="(skill, i) in skills"
-        :key="i"
-      >
-        <div>
-          {{ skill.name }}
-        </div>
-      </div>
-    </div>
-  </div>
 </template>
 <script>
 export default {
@@ -53,6 +42,10 @@ export default {
           name: "Node.js",
         },
         {
+          icon: "express.svg",
+          name: "Express.js",
+        },
+        {
           icon: "vue.svg",
           name: "Vue.js",
         },
@@ -80,6 +73,124 @@ export default {
           icon: "vscode.svg",
           name: "VScode",
         },
+        {
+          icon: "capacitor.svg",
+          name: "Capacitor",
+        },
+        {
+          icon: "android.svg",
+          name: "Android",
+        },
+        {
+          icon: "ios.svg",
+          name: "IOS",
+        },
+      ],
+      experiance: [
+        {
+          company: "Avrio Energy Pvt. Ltd.",
+          start: "01-01-2020",
+          end: "Present",
+          type: "Full Time",
+          title: "Frontend Engineer",
+          pointers: [
+            `Designed, developed and maintained app for android and ios using nuxt.js and ionic capacitor.`,
+            `Design, development and maintenance of SaaS platform and related features - CMMS / ticketing, instant messaging, energy management, alerts and notifications.`,
+            `Built a configuration app to configure Avrio Energy Smart Hardware. App uses Wifi state to connect hardware to the currently available wifi.`,
+            `Created custom charts using d3.js to meet the visualization requirement. Also worked with other charting libraries such as flot charts, apexcharts, highcharts.`,
+          ],
+          tech: [
+            {
+              icon: "nuxt.svg",
+              name: "Nuxt.js",
+            },
+            {
+              icon: "capacitor.svg",
+              name: "Capacitor",
+            },
+            {
+              icon: "android.svg",
+              name: "Android",
+            },
+            {
+              icon: "ios.svg",
+              name: "IOS",
+            },
+            {
+              icon: "flutter.svg",
+              name: "Flutter",
+            },
+            {
+              icon: "adobexd.svg",
+              name: "Adobe XD",
+            },
+            {
+              icon: "chrome.svg",
+              name: "Chrome Dev Tool",
+            },
+            {
+              icon: "vscode.svg",
+              name: "VScode",
+            },
+          ],
+          preview: [
+            {
+              icon: "ios.svg",
+              link: "https://apps.apple.com/au/app/avrio-building-manager/id1576846148",
+              name: "Avrio - Building Manager",
+            },
+            {
+              icon: "android.svg",
+              link: "https://play.google.com/store/apps/details?id=com.avrioenergy.buildingmanager",
+              name: "Building Manager",
+            },
+            {
+              icon: "flutter.svg",
+              link: "https://play.google.com/store/apps/details?id=com.avrioenergy.buildingmanager_device_config",
+              name: "Building Manager Config",
+            },
+            {
+              icon: "website.svg",
+              link: "https://drive.google.com/file/d/1lXDcp-8YAKtVgCzbizTd-igxseJdHIA8/view?usp=sharing",
+              name: "Swadeshi Microprocessor Challenge",
+            },
+          ],
+        },
+        {
+          company: "Menteechain Pvt. Ltd.",
+          start: "01-02-2019",
+          end: "01-05-2019",
+          type: "Intern",
+          title: "Full Stack Engineer",
+          pointers: [
+            `Designed the workflow of the website.`,
+            `Created APIs for the frontend team in express.js.`,
+            `Created a booking system for booking slots for summer camp.`,
+          ],
+          tech: [
+            {
+              icon: "nodejs.svg",
+              name: "Node.js",
+            },
+            {
+              icon: "express.svg",
+              name: "Express.js",
+            },
+            {
+              icon: "adobexd.svg",
+              name: "Adobe XD",
+            },
+            {
+              icon: "chrome.svg",
+              name: "Chrome Dev Tool",
+            },
+            {
+              icon: "vscode.svg",
+              name: "VScode",
+            },
+          ],
+          preview: [],
+        },
       ],
     };
   },
@@ -87,10 +198,8 @@ export default {
 </script>
 <style scoped>
 .skill-set {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  margin-top: 50px;
+  width: 80%;
+  margin: auto;
 }
 .skill-set img {
   width: 80px;
