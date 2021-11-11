@@ -75,6 +75,7 @@ export default {
 }
 .company {
   color: #50dbb4;
+  font-weight: 700;
 }
 .timeline {
   display: flex;

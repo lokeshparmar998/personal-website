@@ -243,6 +243,9 @@ export default {
   font-size: 15px;
   color: white;
 }
+.options:hover{
+  cursor: url("~/assets/images/shared/pointer-cursor.svg"), auto;
+}
 .active {
   border-left: solid 3px #11c0bd;
 }
@@ -255,7 +258,7 @@ export default {
     width: 100%;
   }
   .result {
-    width: 90%;
+    width: 80%;
     margin: auto;
   }
   .navigator {
@@ -266,11 +269,11 @@ export default {
   }
   .options {
     border-bottom: solid 3px #b2becd;
-    border-left: none
+    border-left: none;
   }
   .active {
     border-bottom: solid 3px #11c0bd;
-    border-left: none
+    border-left: none;
   }
 }
 </style>

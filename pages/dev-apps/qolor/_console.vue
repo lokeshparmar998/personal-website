@@ -56,7 +56,7 @@ export default {
     let header = {
       title: "Qolor",
       sub_title: "Never go wrong with colors!",
-      show_bmc:false
+      show_bmc: false,
     };
     this.$store.commit("devAppHeader/SET_HEADER", header);
     if (this.console == "create") {
