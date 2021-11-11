@@ -1,7 +1,12 @@
 <template>
   <div class="skills">
-    <div class="page-header">My Journey</div>
-    <div class="skill-set"></div>
+    <div class="page-header">My Tech. Journey</div>
+    <div class="skill-set">
+      <div class="navigatior">this is navigator</div>
+      <div class="result">
+        <ExperienceContainer :company="experiance[0]" />
+      </div>
+    </div>
   </div>
   <!-- <img
         :src="require(`@/assets/images/skills/${name}.svg`)"
@@ -9,9 +14,10 @@
       /> -->
 </template>
 <script>
+import ExperienceContainer from '@/components/molecules/SkillsAndExperienceContainer.vue'
 export default {
   head: {
-    title: `Lokesh | Lokesh's skills 👷🏽‍♂️`,
+    title: `Lokesh | Lokesh's journey 👷🏽‍♂️`,
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
@@ -21,6 +27,9 @@ export default {
         content: "Tools and technology lokesh is familiar with.",
       },
     ],
+  },
+  components:{
+    ExperienceContainer
   },
   data: function () {
     return {
@@ -89,7 +98,7 @@ export default {
       experiance: [
         {
           company: "Avrio Energy Pvt. Ltd.",
-          start: "01-01-2020",
+          start: "Jan 2020",
           end: "Present",
           type: "Full Time",
           title: "Frontend Engineer",
@@ -97,7 +106,7 @@ export default {
             `Designed, developed and maintained app for android and ios using nuxt.js and ionic capacitor.`,
             `Design, development and maintenance of SaaS platform and related features - CMMS / ticketing, instant messaging, energy management, alerts and notifications.`,
             `Built a configuration app to configure Avrio Energy Smart Hardware. App uses Wifi state to connect hardware to the currently available wifi.`,
-            `Created custom charts using d3.js to meet the visualization requirement. Also worked with other charting libraries such as flot charts, apexcharts, highcharts.`,
+            `Created custom charts using d3.js to meet the visualization requirement. Also worked with other charting libraries such as flot charts, apexcharts, amcharts.`,
           ],
           tech: [
             {
@@ -135,14 +144,14 @@ export default {
           ],
           preview: [
             {
-              icon: "ios.svg",
-              link: "https://apps.apple.com/au/app/avrio-building-manager/id1576846148",
-              name: "Avrio - Building Manager",
-            },
-            {
               icon: "android.svg",
               link: "https://play.google.com/store/apps/details?id=com.avrioenergy.buildingmanager",
               name: "Building Manager",
+            },
+            {
+              icon: "ios.svg",
+              link: "https://apps.apple.com/au/app/avrio-building-manager/id1576846148",
+              name: "Avrio - Building Manager",
             },
             {
               icon: "flutter.svg",
@@ -158,8 +167,8 @@ export default {
         },
         {
           company: "Menteechain Pvt. Ltd.",
-          start: "01-02-2019",
-          end: "01-05-2019",
+          start: "Jan 2019",
+          end: "July 2019",
           type: "Intern",
           title: "Full Stack Engineer",
           pointers: [
@@ -200,9 +209,13 @@ export default {
 .skill-set {
   width: 80%;
   margin: auto;
+  display: flex;
+  justify-content: space-between;
 }
-.skill-set img {
-  width: 80px;
-  margin-top: 20px;
+.navigator{
+  width: 30%;
+}
+.result{
+  width: 70%
 }
 </style>
