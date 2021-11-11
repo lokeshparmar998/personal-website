@@ -2,16 +2,16 @@
   <div class="skills">
     <div class="page-header">My Tech. Journey</div>
     <div class="skill-set">
-      <div class="navigatior">this is navigator</div>
+      <div class="navigatior">
+        <div class="options" :class="[ active == i ? 'active' : '' ]" v-for="(option,i) in experiance" :key="i" @click="navigate(option,i)">
+          {{option.company}}
+        </div>
+      </div>
       <div class="result">
-        <ExperienceContainer :company="experiance[0]" />
+        <component :is="currentComponent" v-bind:company="selectedCompany"> </component>
       </div>
     </div>
   </div>
-  <!-- <img
-        :src="require(`@/assets/images/skills/${name}.svg`)"
-        alt="adobexd icon"
-      /> -->
 </template>
 <script>
 import ExperienceContainer from '@/components/molecules/SkillsAndExperienceContainer.vue'
@@ -201,8 +201,20 @@ export default {
           preview: [],
         },
       ],
+      currentComponent: ExperienceContainer,
+      selectedCompany: null,
+      active:0,
     };
   },
+  created(){
+    this.selectedCompany = this.experiance[0]
+  },
+  methods:{
+    navigate(option,active){
+      this.selectedCompany = option
+      this.active = active
+    }
+  }
 };
 </script>
 <style scoped>
@@ -211,9 +223,22 @@ export default {
   margin: auto;
   display: flex;
   justify-content: space-between;
+  margin-top: 30px;
 }
 .navigator{
   width: 30%;
+}
+.options{
+  background-color: #2c405a;
+  border-left: solid 3px #2c405a;
+  padding: 10px;
+  margin-top: 10px;
+  font-family: "lato", sans-serif;
+  font-size: 18px;
+  color: white;
+}
+.active{
+  border-left: solid 3px #11c0bd;
 }
 .result{
   width: 70%

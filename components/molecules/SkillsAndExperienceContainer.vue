@@ -30,8 +30,8 @@
         </div>
         <!-- -->
       </div>
-      <div class="sub-title">Preview my work</div>
-      <div class="tech-stack">
+      <div class="sub-title" v-if="company.preview.length!=0">Preview my work</div>
+      <div class="tech-stack" v-if="company.preview.length!=0">
         <div v-for="(icon, i) in company.preview" :key="i" class="preview-icon">
           <img
             :src="require(`@/assets/images/skills/${icon.icon}`)"
@@ -57,6 +57,10 @@ export default {
 };
 </script>
 <style scoped>
+/* section{
+    background-color: #2c405a;
+    padding: 10px;
+} */
 .container-header {
   display: flex;
   font-size: 20px;
@@ -90,7 +94,7 @@ ul {
   padding-left: 13px;
 }
 li {
-  margin-top: 13px;
+  margin-top: 10px;
   font-family: "lato", sans-serif;
   color: #b2becd;
   font-size: 18px;
@@ -100,7 +104,7 @@ li {
   color: #b2becd;
   font-size: 20px;
   font-family: "lato", sans-serif;
-  text-decoration: underline;
+  
 }
 .tech-stack {
   display: flex;
