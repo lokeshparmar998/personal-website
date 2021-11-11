@@ -30,8 +30,10 @@
         </div>
         <!-- -->
       </div>
-      <div class="sub-title" v-if="company.preview.length!=0">Preview my work</div>
-      <div class="tech-stack" v-if="company.preview.length!=0">
+      <div class="sub-title" v-if="company.preview.length != 0">
+        Preview my work
+      </div>
+      <div class="tech-stack" v-if="company.preview.length != 0">
         <div v-for="(icon, i) in company.preview" :key="i" class="preview-icon">
           <img
             :src="require(`@/assets/images/skills/${icon.icon}`)"
@@ -51,7 +53,7 @@ export default {
   },
   methods: {
     checkoutWork(link) {
-      window.open(link, '_blank').focus();
+      window.open(link, "_blank").focus();
     },
   },
 };
@@ -104,7 +106,6 @@ li {
   color: #b2becd;
   font-size: 20px;
   font-family: "lato", sans-serif;
-  
 }
 .tech-stack {
   display: flex;
@@ -118,6 +119,7 @@ li {
 .tech-icon {
   display: grid;
   place-items: center;
+  margin-top: 10px;
 }
 .preview-icon img {
   width: 60px;
@@ -130,5 +132,13 @@ li {
   font-size: 12px;
   font-family: "roboto", sans-serif;
   margin-top: 2px;
+}
+@media screen and (max-width: 800px) {
+  .container-header {
+    font-size: 15px;
+  }
+  li {
+    font-size: 15px;
+  }
 }
 </style>

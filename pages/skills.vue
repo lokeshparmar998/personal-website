@@ -2,19 +2,26 @@
   <div class="skills">
     <div class="page-header">My Tech. Journey</div>
     <div class="skill-set">
-      <div class="navigatior">
-        <div class="options" :class="[ active == i ? 'active' : '' ]" v-for="(option,i) in experiance" :key="i" @click="navigate(option,i)">
-          {{option.company}}
+      <div class="navigator">
+        <div
+          class="options"
+          :class="[active == i ? 'active' : '']"
+          v-for="(option, i) in experiance"
+          :key="i"
+          @click="navigate(option, i)"
+        >
+          {{ option.company }}
         </div>
       </div>
       <div class="result">
-        <component :is="currentComponent" v-bind:company="selectedCompany"> </component>
+        <component :is="currentComponent" v-bind:company="selectedCompany">
+        </component>
       </div>
     </div>
   </div>
 </template>
 <script>
-import ExperienceContainer from '@/components/molecules/SkillsAndExperienceContainer.vue'
+import ExperienceContainer from "@/components/molecules/SkillsAndExperienceContainer.vue";
 export default {
   head: {
     title: `Lokesh | Lokesh's journey 👷🏽‍♂️`,
@@ -28,8 +35,8 @@ export default {
       },
     ],
   },
-  components:{
-    ExperienceContainer
+  components: {
+    ExperienceContainer,
   },
   data: function () {
     return {
@@ -97,7 +104,7 @@ export default {
       ],
       experiance: [
         {
-          company: "Avrio Energy Pvt. Ltd.",
+          company: "Avrio Energy",
           start: "Jan 2020",
           end: "Present",
           type: "Full Time",
@@ -166,7 +173,7 @@ export default {
           ],
         },
         {
-          company: "Menteechain Pvt. Ltd.",
+          company: "Menteechain",
           start: "Jan 2019",
           end: "July 2019",
           type: "Intern",
@@ -203,18 +210,18 @@ export default {
       ],
       currentComponent: ExperienceContainer,
       selectedCompany: null,
-      active:0,
+      active: 0,
     };
   },
-  created(){
-    this.selectedCompany = this.experiance[0]
+  created() {
+    this.selectedCompany = this.experiance[0];
   },
-  methods:{
-    navigate(option,active){
-      this.selectedCompany = option
-      this.active = active
-    }
-  }
+  methods: {
+    navigate(option, active) {
+      this.selectedCompany = option;
+      this.active = active;
+    },
+  },
 };
 </script>
 <style scoped>
@@ -225,22 +232,45 @@ export default {
   justify-content: space-between;
   margin-top: 30px;
 }
-.navigator{
-  width: 30%;
+.navigator {
+  width: 25%;
 }
-.options{
+.options {
   background-color: #2c405a;
-  border-left: solid 3px #2c405a;
-  padding: 10px;
-  margin-top: 10px;
+  border-left: solid 3px #b2becd;
+  padding: 20px 10px 20px 15px;
   font-family: "lato", sans-serif;
-  font-size: 18px;
+  font-size: 15px;
   color: white;
 }
-.active{
+.active {
   border-left: solid 3px #11c0bd;
 }
-.result{
-  width: 70%
+.result {
+  width: 70%;
+}
+@media screen and (max-width: 800px) {
+  .skill-set {
+    display: block;
+    width: 100%;
+  }
+  .result {
+    width: 90%;
+    margin: auto;
+  }
+  .navigator {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .options {
+    border-bottom: solid 3px #b2becd;
+    border-left: none
+  }
+  .active {
+    border-bottom: solid 3px #11c0bd;
+    border-left: none
+  }
 }
 </style>
