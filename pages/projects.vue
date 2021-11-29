@@ -36,6 +36,13 @@ export default {
           route: "dev-apps/qolor/home",
           tags: ["Free 🔥", "Tool 🛠️"],
         },
+        {
+          name: "Randomish",
+          description: "Get random qoutes,jokes and much more!",
+          logo: "qolor",
+          route: "apps/randomish/options",
+          tags: ["Fun 👻", "Tool 🛠️"],
+        }
       ],
     };
   },
