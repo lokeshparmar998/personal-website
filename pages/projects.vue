@@ -39,7 +39,7 @@ export default {
         {
           name: "Randomish",
           description: "Get random qoutes, jokes and much more!",
-          logo: "qolor",
+          logo: "randomish",
           route: "apps/randomish/options",
           tags: ["Fun 👻","App 😎"],
         }

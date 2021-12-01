@@ -1,5 +1,7 @@
 <template>
-  <div class="randomish">hello</div>
+  <div class="randomish">
+    
+  </div>
 </template>
 <script>
 export default {
@@ -11,10 +13,10 @@ export default {
   },
   created() {
     let header = {
-      title: "Qolor",
-      sub_title: "Never go wrong with colors!",
+      title: "Randomish",
+      sub_title: "Never get bored, see random things!",
       show_bmc: false,
-      icon: 'qolor.png'
+      icon: 'randomish.png'
     };
     this.$store.commit("devAppHeader/SET_HEADER", header);
   },

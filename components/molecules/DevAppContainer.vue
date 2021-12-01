@@ -19,6 +19,7 @@
 <script>
 import Tag from "@/components/atoms/Tag.vue";
 const Qolor = require("~/assets/images/dev-apps/qolor.png");
+const Randomish = require("~/assets/images/dev-apps/randomish.png");
 export default {
   components: {
     Tag,
@@ -32,7 +33,7 @@ export default {
     };
   },
   created() {
-    let myHash = new Map([["qolor", Qolor]]);
+    let myHash = new Map([["qolor", Qolor],["randomish", Randomish]]);
     this.toolImage = myHash.get(this.tool.logo);
   },
   methods: {
