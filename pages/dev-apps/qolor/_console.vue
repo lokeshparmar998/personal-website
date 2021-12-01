@@ -57,6 +57,7 @@ export default {
       title: "Qolor",
       sub_title: "Never go wrong with colors!",
       show_bmc: false,
+      icon: 'qolor.png',
     };
     this.$store.commit("devAppHeader/SET_HEADER", header);
     if (this.console == "create") {

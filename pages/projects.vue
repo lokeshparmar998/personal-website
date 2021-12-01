@@ -34,14 +34,14 @@ export default {
           description: "Never go wrong with colors!! \n Click to copy color.",
           logo: "qolor",
           route: "dev-apps/qolor/home",
-          tags: ["Free 🔥", "Tool 🛠️"],
+          tags: ["Free 🔥", "Tool 🛠️", "Dev-app 🤓"],
         },
         {
           name: "Randomish",
-          description: "Get random qoutes,jokes and much more!",
+          description: "Get random qoutes, jokes and much more!",
           logo: "qolor",
           route: "apps/randomish/options",
-          tags: ["Fun 👻", "Tool 🛠️"],
+          tags: ["Fun 👻","App 😎"],
         }
       ],
     };

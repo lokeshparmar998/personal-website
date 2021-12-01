@@ -20,6 +20,7 @@ export default {
 <style scoped>
 .fullheight {
   width: 100%;
+  min-height: 100vh;
   background-color: #12181b;
 }
 </style>

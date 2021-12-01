@@ -3,6 +3,7 @@ export const state = () => ({
     title: "",
     sub_title: "",
     show_bmc: false,
+    icon: '',
   },
 });
 

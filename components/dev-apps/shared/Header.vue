@@ -2,7 +2,10 @@
   <header>
     <div class="header-branding">
       <div class="logo">
-        <img src="~/assets/images/dev-apps/qolor.png" alt="" />
+        <img
+            :src="icon"
+            :alt="header.title"
+        />
       </div>
       <div class="buy-me-coffee">
         <a
@@ -28,8 +31,12 @@ export default {
   data: function () {
     return {
       coffeeLink: "https://www.buymeacoffee.com/lokeshparmar998",
+      icon: null
     };
   },
+  mounted(){
+    this.icon = require(`@/assets/images/dev-apps/${this.header.icon}`)
+  }
 };
 </script>
 <style scoped>
